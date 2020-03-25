@@ -128,6 +128,16 @@ class Formulaire2
         $this->genre = $_POST['genre'];
 
     }
+    function display(){
+        echo $this->nom;
+        echo '<br>';
+        echo $this->prenom;
+        echo '<br>';
+        echo $this->age;
+        echo '<br>';
+        echo $this->genre;
+        echo '<br>';
+    }
     function getName(){
         return $this->nom;
     }
@@ -143,7 +153,8 @@ class Formulaire2
 }
 
 $f2=new Formulaire2();
-//echo $f2->nom;
+//echo $f2->nom; -----   ne marche pas, on est obligé de passer par une fonction display
+$f2->display();
 echo $f2->getName();
 echo '<br>';
 echo $f2->getPrenom();
