@@ -79,4 +79,77 @@ $f->ajouterzonetexte();
 echo'<br>';
 $f->ajouterbouton();
 $f->getform();
+
+
+
+echo'<br><br><strong> Exercice 3 </strong><br>';
+
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" >
+</head>
+<body>
+<form action="tp5.php" method="post">
+    Nom :
+    <input type='text' name='nom'/><br>
+    Prenom :
+    <input type='text' name='prenom'/><br>
+    Mail :
+    <input type='text' name='mail'/><br>
+    Age :
+    <input type='number' name='age'/><br>
+    Monsieur:
+    <input type='checkbox' name='genre' value='monsieur'/>
+    Madame :
+    <input type='checkbox' name='genre' value='madame'/><br>
+    <input type='submit' name='Envoi'/><br>
+</form>
+
+</body>
+</html>
+
+<?php
+class Formulaire2
+{
+    private $nom;
+    private $prenom;
+    private $age;
+    private $genre;
+
+    function __construct(){
+        $this->nom = $_POST['nom'];
+        $this->prenom = $_POST['prenom'];
+        $this->age = $_POST['age'];
+        $this->genre = $_POST['genre'];
+
+    }
+    function getName(){
+        return $this->nom;
+    }
+    function getPrenom(){
+        return $this->prenom;
+    }
+    function getAge(){
+        return $this->age;
+    }
+    function getGenre(){
+        return $this->genre;
+    }
+}
+
+$f2=new Formulaire2();
+//echo $f2->nom;
+echo $f2->getName();
+echo '<br>';
+echo $f2->getPrenom();
+echo '<br>';
+echo $f2->getAge();
+echo '<br>';
+echo $f2->getGenre();
+echo '<br>';
 ?>
