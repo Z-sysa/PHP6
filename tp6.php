@@ -1,5 +1,5 @@
 <?php
-
+echo'<br><br><strong> Exercice 1 </strong><br>';
  class equipe {
      //Attributs
      private $name ="Choupisson";
@@ -51,4 +51,40 @@ echo equipe:: displayNbEquipe(); //Obligé de mettre :: car on est en static
 /* $e -> display();
  echo '<br>';
  $e->__destructor();*/
+
+echo'<br><br><strong> Exercice 2 </strong><br>';
+
+class Formulaire {
+    function __construct(){
+       echo '<form action="tp6.php" method="post">
+        Votre nom :
+        ajouterzonetexte();
+        Votre code:
+        ajouterzonetexte();
+        ajouterbouton();
+        </form>';
+
+    }
+    function ajouterzonetexte(){
+        echo'<input type="text"/>';
+    }
+    function ajouterbouton(){
+        echo'<input type="submit" value="Envoi"/>';
+    }
+    function getform(){
+       echo'
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" >
+    </head>
+    <body>
+       Formulaire();
+    </body>
+</html>';
+    }
+
+}
+$f=new Formulaire();
+$f->getform();
 ?>
