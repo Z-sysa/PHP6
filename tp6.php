@@ -56,14 +56,7 @@ echo'<br><br><strong> Exercice 2 </strong><br>';
 
 class Formulaire {
     function __construct(){
-       echo '<form action="tp6.php" method="post">
-        Votre nom :
-        ajouterzonetexte();
-        Votre code:
-        ajouterzonetexte();
-        ajouterbouton();
-        </form>';
-
+       echo '<form action="tp6.php" method="post">';
     }
     function ajouterzonetexte(){
         echo'<input type="text"/>';
@@ -72,19 +65,18 @@ class Formulaire {
         echo'<input type="submit" value="Envoi"/>';
     }
     function getform(){
-       echo'
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" >
-    </head>
-    <body>
-       Formulaire();
-    </body>
-</html>';
+       echo'</form>';
     }
 
 }
 $f=new Formulaire();
+$f->__construct();
+echo 'Votre nom :';
+$f->ajouterzonetexte();
+echo'<br>';
+echo 'Votre code :';
+$f->ajouterzonetexte();
+echo'<br>';
+$f->ajouterbouton();
 $f->getform();
 ?>
